@@ -43,6 +43,8 @@ group :development, :test do
   gem 'capybara'
   gem 'site_prism'
   gem 'selenium-webdriver'
+#add
+  gem 'guard-rspec'
 end
 group :doc do
   gem 'sdoc', '0.3.20', require: false
