@@ -1,16 +1,16 @@
 require 'rails_helper'
 #
 RSpec.feature "static_pages_controller_spec.rb" do
-  scenario "should have the content 'Home'" do
-    visit '/static_pages/home'
-    expect(page).to have_content('Home')
+  scenario "should have the h1 'Sample App'" do
+    visit root_path
+    expect(page).to have_content('Sample App')
   end
   scenario "should have the base title" do
-    visit '/static_pages/home'
+    visit root_path
     expect(page).to have_title("Ruby on Rails Tutorial Sample App")
   end
-  scenario "should not have a custom page title Home" do
-    visit '/static_pages/home'
+  scenario "should not have a custom page title Sample App" do
+    visit root_path
     expect(page).to have_title("| Home")
   end
 end
@@ -18,15 +18,15 @@ end
 #
 RSpec.feature "static_pages_controller_spec.rb" do
   scenario "should have the content 'help'" do
-    visit '/static_pages/help'
+    visit help_path
     expect(page).to have_content('Help')
   end
   scenario "should have the base title" do
-    visit '/static_pages/help'
+    visit help_path
     expect(page).to have_title("Ruby on Rails Tutorial Sample App")
   end
   scenario "should not have a custom page title Help" do
-    visit '/static_pages/help'
+    visit help_path
     expect(page).to have_title("| Help")
   end
 end
@@ -34,15 +34,15 @@ end
 #
 RSpec.feature "static_pages_controller_spec.rb" do
   scenario "should have the content 'About'" do
-    visit '/static_pages/about'
+    visit about_path
     expect(page).to have_content('About Us')
   end
   scenario "should have the base title" do
-    visit '/static_pages/about'
+    visit about_path
     expect(page).to have_title("Ruby on Rails Tutorial Sample App")
   end
   scenario "should not have a custom page title About Us" do
-    visit '/static_pages/about'
+    visit about_path
     expect(page).to have_title("| About Us")
   end
 end
@@ -50,15 +50,18 @@ end
 #
 RSpec.feature "static_pages_controller_spec.rb" do
   scenario "should have the content 'Contacts'" do
-    visit '/static_pages/contacts'
+    visit contacts_path
     expect(page).to have_content('Contacts')
   end
   scenario "should have the right Contacts" do
-    visit '/static_pages/contacts'
+    visit contacts_path
     expect(page).to have_title("Ruby on Rails Tutorial Sample App")
   end
   scenario "should not have a custom page title Contacts" do
-    visit '/static_pages/contacts'
+    visit contacts_path
     expect(page).to have_title("| Contacts")
   end
 end
+#
+#
+

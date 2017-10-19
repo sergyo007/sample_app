@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+gem 'bootstrap-sass'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -40,12 +41,16 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'site_prism'
-  gem 'selenium-webdriver'
 #add
   gem 'guard-rspec'
 end
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+end
+
 group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
@@ -62,4 +67,4 @@ group :production do
   gem 'rails_12factor'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
